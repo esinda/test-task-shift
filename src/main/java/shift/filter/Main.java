@@ -7,23 +7,16 @@ public class Main {
 
         ArgsParser parser = new ArgsParser(args);
 
-        System.out.println("Append mode: " + parser.isAppend());
-        System.out.println("Output path: " + parser.getOutputPath());
-        System.out.println("Prefix: " + parser.getPrefix());
-
-        if (parser.isFullStat()) {
-            System.out.println("Statistics: FULL");
-        } else if (parser.isShortStat()) {
-            System.out.println("Statistics: SHORT");
-        } else {
-            System.out.println("Statistics: NONE");
+        if (parser.getInputFiles().isEmpty()) {
+            System.out.println("Не указаны входные файлы. Завершение работы.");
+            return;
         }
 
-        System.out.println("Input files:");
-        for (String file : parser.getInputFiles()) {
-            System.out.println(" - " + file);
-        }
+        FileProcessor fileProcessor = new FileProcessor();
 
-        System.out.println("Обработка данных пока не реализована.");
+        fileProcessor.processFiles(parser.getInputFiles(),
+                line -> System.out.println("Прочитано: " + line));
+
+        System.out.println("Чтение файлов завершено.");
     }
 }
