@@ -38,13 +38,11 @@ java -jar target/test-task-shift-1.0.0.jar -s -f -a -p sample- src/main/resource
 Файлы с данными:
 
 sample-integers.txt
-
 sample-floats.txt
-
 sample-strings.txt
 
 ### Примечания
 
 - Если для какого-то типа данных нет элементов, файл не создаётся.
 
--Код написан без сторонних библиотек, используется только стандартная Java.
+- Код написан без сторонних библиотек, используется только стандартная Java.
