@@ -23,7 +23,7 @@
 
 ```bash
 mvn clean package
-
+```
 
 ### Запуск
 
@@ -31,7 +31,7 @@ mvn clean package
 
 ```bash
 java -jar target/test-task-shift-1.0.0.jar -s -f -a -p sample- src/main/resources/in1.txt src/main/resources/in2.txt
-
+```
 
 ### Результат
 
